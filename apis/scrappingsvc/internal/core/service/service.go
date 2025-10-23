@@ -78,7 +78,7 @@ func (s *ScraperService) scrapeSites(ctx context.Context) ([]domain.Listing, err
 	// }
 
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
-		chromedp.Flag("headless", true),
+		chromedp.Flag("headless", false),
 		chromedp.Flag("disable-gpu", true),
 		chromedp.Flag("disable-blink-features", "AutomationControlled"),
 		chromedp.Flag("disable-extensions", true),
